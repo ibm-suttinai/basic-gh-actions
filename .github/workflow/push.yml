@@ -1,0 +1,13 @@
+name: Push Project
+on: push
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test
+      - name: Deploy
+        run: npm run build
+      
